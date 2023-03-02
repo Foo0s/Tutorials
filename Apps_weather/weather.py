@@ -20,13 +20,13 @@ def weather(params):
     url = "https://yandex.ru/pogoda/"
     try:
         driver.get(url)
-        with open("read_soup.html") as f1:
-            f1.write(driver.page_source)
+        with open("C:/Users/user/PycharmProjects/Tutorials/Apps_weather/read_soup.html", "w", encoding="UTF-8") as f2:
+            f2.write(driver.page_source)
     except Exception:
-        weather_now(params)
-        weather_tomorrow(params)
         print(Exception)
     finally:
+        weather_now(params)
+        weather_tomorrow(params)
         driver.close()
 
 def weather_now(params):
@@ -83,4 +83,5 @@ def weather_tomorrow(params):
     params.linedit_6.setText(f"{type_weather}")
     params.linedit_7.setText(f"unknow")
     params.linedit_8.setText(f"{grad_north}")
+
 
