@@ -1,7 +1,7 @@
 import sys
-from PyQt6.QtWidgets import QApplication, QWidget, QLayout, QLabel, QPushButton, QMainWindow, QLineEdit, QDateTimeEdit, QDateEdit, QMessageBox
-from PyQt6 import QtCore, QtGui
-import database
+from PyQt6.QtWidgets import QApplication, QLabel, QPushButton, QMainWindow, QLineEdit, QDateEdit, QMessageBox
+from register_apps import database
+
 
 class Application_register(QMainWindow):
     def __init__(self):

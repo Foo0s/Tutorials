@@ -1,5 +1,5 @@
 import sqlite3
-from apps import Application_register
+from register_apps.apps import Application_register
 
 
 #Подключение БД.
