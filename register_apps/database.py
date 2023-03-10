@@ -27,4 +27,10 @@ def check_users(str1, str2, str3):
     if not cursor.fetchall():
         update_data(str(str1), str(str2), str(str3))
     else:
-        Application_register.answer_user(23)
+        Application_register.answer_user(True)
+def reg_users(str1, str2, str3):
+    cursor.execute(f"SELECT email, password FROM users WHERE email=? AND password=?", (str1, str2))
+    if not cursor.fetchall():
+        Application_register.answer_mistake_for_user(True)
+    else:
+        Application_register.hello_user(True)
